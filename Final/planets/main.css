@@ -1,0 +1,408 @@
+/*   design based on: https://codepen.io/mgitch/pen/pECcD   */
+
+
+body{
+    background-color: #303782;
+    
+}
+
+.container{
+    
+   
+
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    
+}
+
+
+/*P L A N E T */
+
+.planet{
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 100px;
+    margin-bottom:  25%;
+    box-shadow: inset -15px 0px 0 rgba(0,0,0,.1);
+  
+}
+
+
+/* CUSTOMIZE BOX SHADOW!!*/
+#sun{
+    position: relative;
+    display: inline-block;
+    height:800px;
+    width:400px;
+    left: 0;
+    margin-top: 0;
+    margin-right:200px;
+    border-radius: 0 600px 600px 0;
+    background: yellow; 
+}
+
+
+
+/* M E R C U R Y   38%*/
+#mercury{
+    height: 38px;    
+    width: 38px;
+    background: #c1c1c1;
+      
+}
+
+
+/*  V E N U S    94%*/
+#venus{
+    height: 94px;    
+    width: 94px;
+    background:#e6d2f7;
+      
+}
+
+/*  E A R T H    100%*/
+#earth{
+    height: 100px;    
+    width: 100px;
+    background: #2e28e0;
+    margin-right: 150px;
+      
+}
+
+
+#green{
+     position: relative;
+    display: block;
+    background: green;
+    border-radius: 40%;
+    border-bottom-right-radius: 100%;
+    margin: 0;
+    height: 50px;
+    width:50px;
+    transform: translateY(10px) translateX(15px);      
+    
+}
+
+#green2{
+     position: relative;
+    display: block;
+    background: green;
+    border-radius: 60%;
+    border-top-right-radius: 20%;
+    margin: 0;
+    height: 40px;
+    width:20px;
+    transform: translateY(-20px) translateX(45px);      
+    
+}
+
+
+#green3{
+     position: relative;
+    display: block;
+    background: green;
+    border-radius: 40%;
+    border-top-right-radius: 60%;
+    margin: 0;
+    height: 15px;
+    width:20px;
+    transform: translateY(-17px) translateX(60px);      
+    
+}
+/*  M A R S    53%*/
+#mars{
+    height: 53px;    
+    width: 53px;
+    background: #e54b30;
+    margin-right:200px;
+      
+}
+
+/* J U P I T E R    1121%*/
+#jupiter{
+    height: 500px;    
+    width: 500px;
+    background: #f2c596;
+    margin-right: 300px;
+}
+
+
+#spot{
+    position: relative;
+    display: block;
+    background: #d8622f;
+    border-radius: 100%;
+    margin: 0;
+    height: 50px;
+    width:65px;
+    box-shadow: inset 15px 0px 0px rgba(255,0,0,.1);
+/*    box-shadow: inset 15px 25px 0 rgba(0,0,0,.1);*/
+     transform: translateY(280px) translateX(325px);      
+    
+    
+}
+
+
+#stripe{
+    
+    position: relative;
+    display: block;
+    background: rgba(216, 98, 47, 0.3);
+    border-radius: 50%;
+    margin: 0;
+    height: 50px;
+    width:475px;
+
+     transform: translateY(150px) translateX(12px);   
+}
+
+
+
+#stripe2{
+    
+    position: relative;
+    display: block;
+    background: rgba(255, 249, 211,0.2);
+    border-radius: 30%;
+    margin: 0;
+    height: 75px;
+    width:490px;
+
+     transform: translateY(170px) translateX(5px);   
+}
+
+
+#stripe3{
+    
+    position: relative;
+    display: block;
+    background: rgba(216, 98, 47, 0.3);
+    border-radius: 50%;
+    margin: 0;
+    height: 20px;
+    width:340px;
+
+     transform: translateY(250px) translateX(75px);   
+}
+
+
+/* S A T U R N */
+/* RINGS HELP: https://stackoverflow.com/questions/35142819/achieving-a-planet-with-rings-effect-with-css*/
+/*945%*/
+#saturn{
+    height: 400px;    
+    width: 400px;
+    background: #ffe9a8;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin-right: 400px;
+}
+
+
+#satRing {
+  width: 150%;
+  height: 150%;
+  border: solid 7px #e8dca4;
+  border-radius: 50%;
+  top: -25%; 
+  left: -25%; 
+  position: absolute;
+  transform: rotate3d(-0.5, 0.2, 0, 80deg); 
+  box-sizing: border-box;
+}
+
+
+#satRing2 {
+  width: 130%;
+  height: 130%;
+  border: solid 18px #99906b;
+  border-radius: 50%;
+  top: -15%; 
+  left: -15%; 
+  position: absolute;
+  transform: rotate3d(-0.5, 0.2, 0, 80deg); 
+  box-sizing: border-box;
+  
+}
+
+#satRing3 {
+  width: 170%;
+  height: 170%;
+  border: solid 28px #baa978;
+  border-radius: 50%;
+  top: -35%; 
+  left: -35%; 
+  position: absolute;
+  transform: rotate3d(-0.5, 0.2, 0, 80deg); 
+  box-sizing: border-box;
+
+}
+
+
+/* U R A N U S    401%*/
+#uranus{
+    height: 200px;    
+    width: 200px;
+    background: #ceeeff;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+}
+
+#uranusRing{
+    width: 150%;
+  height: 150%;
+  border: solid 10px #ffe9a8;
+  border-radius: 50%;
+  top: -25%; 
+  left: -25%; 
+  position: absolute;
+  transform: rotate3d(-0.6, 2, 0, 75deg); 
+  box-sizing: border-box;
+}
+
+/* N E P T U N E    30%*/
+#neptune{
+    height: 30px;    
+    width: 30px;
+    background: #1120c6;
+}
+
+/* P L U T 0   19%*/
+#pluto{
+    height: 19px;    
+    width: 19px;
+    background: #937f44;
+      
+}
+
+
+
+.ray {
+    position: absolute;
+    width: 45px;
+    height: 6px;
+    background: #fef1d9;
+    border-radius: 25px;
+    z-index: 50;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+
+
+.ray:nth-child(1) {
+    bottom: 295px;
+/*  TEST  background: blue;*/
+    animation: ray 10s 1s linear infinite;
+}
+.ray:nth-child(2) {
+    bottom:320px;
+/*  TEST  background: red;*/
+    animation: ray 20s 2s linear infinite;
+}
+.ray:nth-child(3) {
+    bottom: 0px;
+    top: 550px;
+/* TEST   background:green;*/
+    animation: ray 15s 1.5s linear infinite;
+}
+.ray:nth-child(4) {
+    bottom: 400px;
+/* TEST   background:black;*/
+
+    animation: ray 18s 2s linear infinite;
+}
+.ray:nth-child(5) {
+    bottom: 380px;
+/*  TEST  background:orange;*/
+ 
+    animation: ray 10s .5s linear infinite;
+}
+.ray:nth-child(6) {
+    bottom: 200px;
+/* TEST background: purple;*/
+    animation: ray 15s 1.3s linear infinite;
+}
+.ray:nth-child(7) {
+    bottom: 280px;
+/* TEST background: pink;*/
+    animation: ray 15s 1s linear infinite;
+}
+.ray:nth-child(8) {
+  bottom: 0px;
+    top: 800px;
+/*  TEST  background:gray;*/
+  
+    animation: ray 10s .5s linear infinite;
+}
+
+.ray:nth-child(9) {
+    bottom: 0px;
+    top: 690px;
+/* TEST   background:yellow;*/
+  
+    animation: ray 7s .9s linear infinite;
+}
+
+.ray:nth-child(10) {
+    bottom: 0px;
+    top: 650px;
+/* TEST   background:lightblue;*/
+  
+    animation: ray 13s 1.2s linear infinite;
+}
+
+.ray:nth-child(11) {
+    bottom: 0px;
+    top: 400px;
+/*  TEST  background:lightpink;*/
+  
+    animation: ray 23s 2.5s linear infinite;
+}
+
+.ray:nth-child(12) {
+    bottom: 0px;
+    top: 300px;
+/*  TEST  background:white;*/
+  
+    animation: ray 20s .5s linear infinite;
+}
+
+@keyframes ray {
+  0%, 15% {
+    
+            transform: scaleX(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+
+            transform: scaleX(1) translateX(1100px);
+    opacity: 1;
+  }
+  70% {
+   
+            transform: scaleX(1) translateX(1700px);
+    opacity: 1;
+  }
+  75% {
+    
+            transform: scaleX(1) translateX(2000px);
+    opacity: 0;
+  }
+  100% {
+    
+            transform: scaleX(0) translateX(0);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+

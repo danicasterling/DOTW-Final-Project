@@ -1,76 +1,61 @@
 <!DOCTYPE html> 
 <html>
     <head>
-        <title> Assignment 5</title>
+        <title> Navigation </title>
         <link rel='stylesheet' href="main.css"> 
         <meta charset="utf-8">
     </head>
     <body>
         
-        <audio id="audio" autoplay>
-        <source src="#" type="audio/mpeg" id="source">
-            your browser does not support the audio element.
-        </audio>
         
-    <div class="container">
-        
-        <div id="sun">
-        </div>
-        
-        <div class="planet" id="mercury" onclick="music()"> 
-        </div>
-        
-            
-        <div class="planet" id="venus" onclick="music()"> 
-        </div>
-        
-        
-         <div class="planet" id="earth" onclick="music()">
-            <span id="green"></span>
-             <span id="green2"></span>
-             <span id="green3"></span>
-             
-        </div>
-        
-         <div class="planet" id="mars" onclick="music()">
-            
-             
-        </div>
-        
-        
-         <div class="planet" id="jupiter" onclick="music()">
-            <span id="stripe"></span>
-            <span id="stripe2"></span>
-            <span id="spot"></span>
-            <span id="stripe3"></span>
-        </div>
-        
-        
-         <div class="planet" id="saturn" onclick="music()">
-             <span id="satRing"></span>
-             <span id="satRing2"></span>
-             <span id="satRing3"></span>
-        </div>
-  
-         <div class="planet" id="uranus" onclick="music()">
-            <span id="uranusRing"></span>  
-        </div>
-            
-         <div class="planet" id="neptune" onclick="music()">
-        </div>
-        
-        
-        <div class="planet" id="pluto" onclick="music()">
-            
-             
-        </div>
+        <div id="container">
+            <audio autoplay loop>
+<!--                Flashback (Interlude) by Scott Williams-->
+                <source src="soundscape.mp3" type="audio/mpeg" id="source">
+                your browser does not support the audio element.
+            </audio>
             
             
-    </div> <!-- close . container -->
-        
-<!--        <img src="astro.png" height=50px>-->
+            
+            <div id="star"> 
+                <a href="stars/index.html">
+                    <img src="diamondstar.png" id="northstar" height="57" width="50">
+                </a> 
+            </div>
 
+
+
+            <div id="topstars" class="mouse-bg"></div>
+            <div id="bottomstars" class="mouse-bg"></div>
+
+            <div id="planet">
+                <span id="ring"></span>
+            </div>
+
+            <img src="cloud.png" id="cloud1">
+            <img src="cloud.png" id="cloud2">
+            <img src="cloud.png" id="cloud3">
+            
+            
+            
+            
+
+            <a href="ship/index.html"><img src="rocket.png" id="rocket" height="200"></a>
+            <div id="launchpad"></div>
+            <div id="building"><span id="sign">MISSION CONTROL</span></div>
+            <div id="earth"></div>
+        </div> <!-- Close #container -->
+   
+        
+<!--       J A V A S C R I P T-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+       
+<!--        Parallax plugin-->
+    <script src="mouse.parallax.js"></script>
+        
     <script type="text/javascript" src="main.js"></script>  
     </body>
 
 </html>
+
+

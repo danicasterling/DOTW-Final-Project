@@ -1,290 +1,225 @@
-/*   design based on: https://codepen.io/mgitch/pen/pECcD   */
-
+html{
+    background: lightblue;
+}
 
 body{
-    background-color: #303782;
+    background: linear-gradient( black,#303782,lightblue);
+    background-repeat: no-repeat;
+    margin: 0;
+    height:2500px;
     
+
 }
 
-.container{
+#container{
     
-   
-/*    margin: 20px auto;*/
-/*    margin-top: 18%;*/
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    
+/*    background: linear-gradient( black,#303782,lightblue);*/
+ 
 }
 
-
-/*P L A N E T */
-
-.planet{
-    position: relative;
+#star{
+    
+    position: absolute;
+    display: block;
     z-index: 10;
-    display: inline-block;
-    border-radius: 100%;
-    margin: 65px;
-    margin-bottom:  25%;
-    
+    margin-top: 100px;
+    margin-left:100px;
+    margin-bottom: 95%;
+    filter: drop-shadow(0 0 6px rgba(255,235,110,0.7));
    
-    box-shadow: inset -15px 0px 0 rgba(0,0,0,.1);
-  
 }
 
-
-/* CUSTOMIZE BOX SHADOW!!*/
-#sun{
-    position: relative;
-    display: inline-block;
-    height:800px;
-    width:400px;
-    left: 0;
-    margin-right:100px;
-    border-radius: 0 600px 600px 0;
-    background: yellow; 
-}
-
-
-
-/* M E R C U R Y   38%*/
-#mercury{
-    height: 38px;    
-    width: 38px;
-    background: #c1c1c1;
-      
-}
-
-
-/*  V E N U S    94%*/
-#venus{
-    height: 94px;    
-    width: 94px;
-    background:#e6d2f7;
-      
-}
-
-/*  E A R T H    100%*/
-#earth{
-    height: 100px;    
-    width: 100px;
-    background: #2e28e0;
-      
-}
-
-
-#green{
-     position: relative;
-    display: block;
-    background: green;
-    border-radius: 40%;
-    border-bottom-right-radius: 100%;
-    margin: 0;
-    height: 50px;
-    width:50px;
-    transform: translateY(10px) translateX(15px);      
-    
-}
-
-#green2{
-     position: relative;
-    display: block;
-    background: green;
-    border-radius: 60%;
-    border-top-right-radius: 20%;
-    margin: 0;
-    height: 40px;
-    width:20px;
-    transform: translateY(-20px) translateX(45px);      
-    
-}
-
-
-#green3{
-     position: relative;
-    display: block;
-    background: green;
-    border-radius: 40%;
-    border-top-right-radius: 60%;
-    margin: 0;
-    height: 15px;
-    width:20px;
-    transform: translateY(-17px) translateX(60px);      
-    
-}
-/*  M A R S    53%*/
-#mars{
-    height: 53px;    
-    width: 53px;
-    background: #e54b30;
-      
-}
-
-/* J U P I T E R    1121%*/
-#jupiter{
-    height: 500px;    
-    width: 500px;
-    background: #f2c596;
-}
-
-
-#spot{
-    position: relative;
-    display: block;
-    background: #d8622f;
-    border-radius: 100%;
-    margin: 0;
-    height: 50px;
-    width:65px;
-    box-shadow: inset 15px 0px 0px rgba(255,0,0,.1);
-/*    box-shadow: inset 15px 25px 0 rgba(0,0,0,.1);*/
-     transform: translateY(280px) translateX(325px);      
-    
-    
-}
-
-
-#stripe{
+#building{
     
     position: relative;
-    display: block;
-    background: rgba(216, 98, 47, 0.3);
-    border-radius: 50%;
-    margin: 0;
-    height: 50px;
-    width:475px;
-
-     transform: translateY(150px) translateX(12px);   
+    width: 300px;
+    height: 200px;
+    background: url(brick.jpg);
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left:15%;
+    z-index: 10;
 }
 
 
+#sign{
+    position: absolute;
+    width: 275px;
+    height:40px;
+    background: #990000;
+    z-index:15;
+    margin-top: 15px;
+    margin-left:10px;
+    border: solid 3px white;
+    font-size: 1.7em;
+    text-align: center;
+    padding-top: 13px;
+    padding-bottom: 0;
+    font-family: Arial;
+    color:white;
+}
 
-#stripe2{
-    
+#rocket{
     position: relative;
-    display: block;
-    background: rgba(255, 249, 211,0.2);
-    border-radius: 30%;
-    margin: 0;
-    height: 75px;
-    width:490px;
-
-     transform: translateY(170px) translateX(5px);   
-}
-
-
-#stripe3{
+    top: 440px;
+    margin-bottom: 0;
+    margin-left:70%;
+    z-index: 10;
     
-    position: relative;
-    display: block;
-    background: rgba(216, 98, 47, 0.3);
-    border-radius: 50%;
-    margin: 0;
-    height: 20px;
-    width:340px;
-
-     transform: translateY(250px) translateX(75px);   
+    
 }
 
-
-/* S A T U R N */
-/* RINGS HELP: https://stackoverflow.com/questions/35142819/achieving-a-planet-with-rings-effect-with-css*/
-/*945%*/
-#saturn{
-    height: 400px;    
-    width: 400px;
-    background: #ffe9a8;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-
-#satRing {
-  width: 150%;
-  height: 150%;
-  border: solid 7px #e8dca4;
-  border-radius: 50%;
-  top: -25%; 
-  left: -25%; 
-  position: absolute;
-  transform: rotate3d(-0.5, 0.2, 0, 80deg); 
-  box-sizing: border-box;
-}
-
-
-#satRing2 {
-  width: 130%;
-  height: 130%;
-  border: solid 18px #99906b;
-  border-radius: 50%;
-  top: -15%; 
-  left: -15%; 
-  position: absolute;
-  transform: rotate3d(-0.5, 0.2, 0, 80deg); 
-  box-sizing: border-box;
-}
-
-#satRing3 {
-  width: 170%;
-  height: 170%;
-  border: solid 28px #baa978;
-  border-radius: 50%;
-  top: -35%; 
-  left: -35%; 
-  position: absolute;
-  transform: rotate3d(-0.5, 0.2, 0, 80deg); 
-  box-sizing: border-box;
-}
-
-
-/* U R A N U S    401%*/
-#uranus{
-    height: 200px;    
+#launchpad{
+    
     width: 200px;
-    background: #ceeeff;
-    perspective: 1000px;
-  transform-style: preserve-3d;
-
-}
-
-#uranusRing{
-    width: 150%;
-  height: 150%;
-  border: solid 10px #ffe9a8;
-  border-radius: 50%;
-  top: -25%; 
-  left: -25%; 
-  position: absolute;
-  transform: rotate3d(-0.6, 2, 0, 75deg); 
-  box-sizing: border-box;
-}
-
-/* N E P T U N E    30%*/
-#neptune{
-    height: 30px;    
-    width: 30px;
-    background: #1120c6;
-}
-
-/* P L U T 0   19%*/
-#pluto{
-    height: 19px;    
-    width: 19px;
-    background: #937f44;
-      
-}
-
-/*
-.shadow{
+    height: 200px;
+    border: solid 7px darkgray;
+    background:gray;
+    border-radius: 50%;
+    top: 330px;
+    left: 66%;
+    bottom:0;
+    z-index:1;
     position: relative;
-    display: inline-block;
+    transform: rotate3d(-2, 0, 0, 80deg); 
+}
+
+#earth{
+    
+    position: absolute;
+    height:65px;
+    width:100%;
+    margin-top: 0;
+    margin-bottom: 0px;
+    border-radius: 200px 200px 0 0;
+    background:green;
+
+}
+
+#northstar{
+    position:absolute;
+}
+
+
+
+
+#topstars{
+    height: 500px;
+    width: 1250px;
+    background: url(small.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 1;
+    
+
+}
+
+#bottomstars{
+    height:1650px;
+    width: 1250px;
+    background: url(med.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 1;
+    overflow: hidden;
+    
+
+}
+
+
+#planet{
+    
+    position: absolute;
+    z-index: 10;
+    margin-top: 1000px;
+    margin-left:75%;
+    margin-bottom: 0;
     border-radius: 100%;
-    height: 10px;
-    width: 50px;
-    margin: 0;
-    background: rgba(0,0,0,.2);
-    transform: translateY(60px) translateX(50px) ; 
+    box-shadow: inset -15px 0px 0 rgba(0,0,0,.1);
+    height: 75px;    
+    width: 75px;
+    background: #ceeeff;
+    perspective: 750px;
+    transform-style: preserve-3d;
+
+
+}
+
+
+#ring{
+    width: 150%;
+    height: 150%;
+    border: solid 10px #ffe9a8;
+    border-radius: 50%;
+    top: -25%; 
+    left: -25%; 
+    position: absolute;
+    transform: rotate3d(-2, 2, 0, 70deg); 
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 6px rgba(255,235,110,0.7));   
+}
+
+
+
+#cloud1{
+    position: relative;
+    margin-top: 1575px;
+    margin-bottom: 650px;
+    margin-left: 0;
+    transform: translate();
+    animation: cloud 18s linear infinite;
+}
+
+#cloud2{
+    position: relative;
+    height: 10em;
+    margin-top: 1575px;
+    margin-bottom: 200px;
+    margin-left: 0;
+    transform: translate();
+    animation: cloud 40s linear infinite;
+}
+
+#cloud3{
+    position: relative;
+    height:8em;
+    margin-top: 1575px;
+    margin-bottom: -150px;
+    margin-left: 0;
+    transform: translate();
+    animation: cloud 27s linear infinite;
+}
+
+
+
+
+
+a{
+    text-decoration: none;
+     color: rgba(255,235,110,.7);
+    display: block;
+}
+
+
+
+
+@keyframes cloud{
+    
+    0%{ transform: translateX(-700px);
+        opacity:1;
+    }
+    
+    90%{ transform: translateX(1600px);
+        opacity: 1;
+        
+    }
+    
+    91%{opacity:0;}
+    
+    100%{  transform: translateX(-1800px);
+            opacity:0;
+    }
+    
 }
 
 

@@ -1,0 +1,101 @@
+
+body{
+   height:620px;
+    background: linear-gradient( black, purple);
+ 
+}
+
+
+
+#asteroid{
+    background: url(asteroid1.png) no-repeat;
+    margin-left:90%;
+    margin-top: 45%;
+    
+}
+
+#asteroid2{
+    background: url(asteroid1.png) no-repeat;
+    margin-left:45%;
+   
+    
+}
+
+
+#bigStar{
+    background: url(diamondstar.png) no-repeat;
+    margin-left:95%;
+    opacity:.9;
+
+}
+
+#meteor{
+    background: url(asteroid2.png) no-repeat;
+    margin-left:10%;
+    margin-top: 5%
+
+}
+
+#alien{
+    background: url(ufo.png) no-repeat;
+    margin-left:85%;
+    margin-top:45%;
+}
+
+
+.mouse-bg {
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+position: absolute;
+z-index: 30;
+}
+
+
+
+#pStars {
+	background: url(small.png) repeat 35% 35%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 20;
+   
+}
+
+
+#midgroundStars {
+	background: url(med.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 10;
+	animation: float 150s linear infinite;
+}
+
+/*
+#foregroundStars {
+	background: url(small.png) repeat 35% 35%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 20;
+    animation: float 100s linear infinite;
+}
+*/
+
+
+
+
+
+@keyframes float {
+	from {
+		left: 0;
+		top: 0;
+	}
+	to { 
+		left: -10000px;
+		top: -2000px;
+	}
+}
+
+
+
+
